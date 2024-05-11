@@ -1,26 +1,26 @@
 manifest:
   remotes:
-    - name: nrfconnect
-      url-base: https://github.com/nrfconnect
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
   projects:
-    - name: nrf
-      repo-path: sdk-nrf
-      remote: nrfconnect
-      revision: v2.5.1
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: main
+      path: zephyr
       import:
-        name-blocklist:
-          - matter
-          - nrf-802154
-          - cjson
-          - openthread
-          - cmock
-          - unity
-          - cddl-gen
-          - homekit
-          - loramac-node
-          - lz4
-          - lvgl
-          - mipi-sys-t
+        name-allowlist:
+          - cmsis
+          - hal_espressif
+          - hal_nordic
+          - littlefs
+          - mbedtls
+          - mcuboot
+          - mcumgr
+          - segger
+          - tinycbor
+          - tinycrypt
+          - zcbor
+
   self:
     # This repository should be cloned to
     path: app
